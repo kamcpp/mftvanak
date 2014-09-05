@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="examples.hibernate.domain.entity.Student" table="tbl_student">
+		<id name="id" type="int" column="col_id">
+			<generator class="native" />
+		</id>
+		<property name="name" column="col_first_name" />
+		<property name="family" column="col_last_name" />
+		<property name="age" column="col_age" />
+	</class>
+</hibernate-mapping>
