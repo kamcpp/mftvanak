@@ -1,9 +1,16 @@
 package com.mftvanak.classes.jee.zero.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "user", schema = "membership")
 public class User {
 
 	private String name;
 	private String family;
+	@Id
 	private String username;
 	private String password;
 

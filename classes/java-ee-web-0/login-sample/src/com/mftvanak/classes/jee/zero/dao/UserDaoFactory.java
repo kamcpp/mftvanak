@@ -1,6 +1,6 @@
 package com.mftvanak.classes.jee.zero.dao;
 
-import com.mftvanak.classes.jee.zero.dao.impl.DatabaseUserDao;
+import com.mftvanak.classes.jee.zero.dao.impl.JPAUserDao;
 
 public class UserDaoFactory {
 
@@ -9,7 +9,7 @@ public class UserDaoFactory {
 	public static UserDao createSingleton() {
 		if (userDao == null) {
 			System.out.println("INFO Making a user dao ...");
-			userDao = new DatabaseUserDao();
+			userDao = new JPAUserDao();
 		}
 		return userDao;
 	}
