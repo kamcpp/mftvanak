@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="helloworld" extends="struts-default">
+
+		<action name="hellow" class="examples.struts.actions.HelloWorldAction"
+			method="execute">
+			<result name="hello-world-view">/HelloWorld.jsp</result>
+		</action>
+		<action name="signup" class="examples.struts.actions.SignupAction"
+			method="exec">
+			<result name="signup-view">/Signup.jsp</result>
+		</action>
+		<action name="perform-signup" class="examples.struts.actions.PerformSignupAction"
+			method="doSignup">
+			<result name="signup-view">/Signup.jsp</result>
+			<result name="signup-successful-view">/SignupSuccess.jsp</result>
+		</action>
+	</package>
+</struts>
