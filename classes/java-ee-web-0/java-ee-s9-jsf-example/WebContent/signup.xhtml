@@ -9,18 +9,16 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html">
 <head>
-<title>First JSF Example</title>
+<title>Sign Up</title>
 </head>
 <body>
 	<h:form>
-		<h:outputLabel value="Form Example"></h:outputLabel><br />
-		<h:outputLabel value="Name"></h:outputLabel>
-		<h:inputText value="${myBean.name}"></h:inputText>
-		<h:inputText value="${helloSayerBean.text}"></h:inputText>
-		<br />
-		<h:commandButton action="${myBean.getAction}">Click</h:commandButton>
+		Name <h:inputText value="${signupBean.name}"></h:inputText><br />
+		Family <h:inputText value="${signupBean.family}"></h:inputText><br />
+		Username <h:inputText value="${signupBean.username}"></h:inputText><br />
+		Password <h:inputText value="${signupBean.password}"></h:inputText><br />
+		Password Confirmation <h:inputText value="${signupBean.passwordConfirmation}"></h:inputText><br />
+		<h:commandButton action="${signupBean.doSignup}">Click</h:commandButton>
 	</h:form>
-	<h1>Hello ${helloSayerBean.sayHello(myBean.name)}</h1>
-	<h1>Bye ${helloSayerBean.text}</h1>
 </body>
 </html>

@@ -2,6 +2,7 @@
     <wb-module deploy-name="java-ee-s9-jsf-example">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <property name="context-root" value="java-ee-s9-jsf-example"/>
         <property name="java-output-path" value="/java-ee-s9-jsf-example/build/classes"/>
     </wb-module>
