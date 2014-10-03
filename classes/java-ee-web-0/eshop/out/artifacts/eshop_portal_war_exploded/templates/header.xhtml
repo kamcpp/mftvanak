@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c = "http://java.sun.com/jsp/jstl/core">
+    <ui:composition>
+        <c:choose>
+        <c:when test="#{empty sessionScope.user}">
+        <a href="/signup.xhtml">SIGNUP</a>
+        <a href="/login.xhtml">LOGIN</a>
+        </c:when>
+            <c:otherwise>
+                <span style="font-weight: bold; font-family: arial;">WELCOME #{sessionScope.user.name}</span>
+                <c:set var="contains" value="false" />
+                <c:forEach var="item" items="#{sessionScope.user.roles}">
+                    <c:if test="#{item.name == 'ROLE_ADMIN'}">
+                        <c:set var="contains" value="true" />
+                    </c:if>
+                </c:forEach>
+                <c:if test="#{contains}">
+                    <a style="float: right;" href="/users">MANAGE USERS</a>
+                </c:if>
+                <a style="float: right;" href="/logout.xhtml">LOGOUT</a>
+            </c:otherwise>
+        </c:choose>
+        <hr />
+    </ui:composition>
+</html>

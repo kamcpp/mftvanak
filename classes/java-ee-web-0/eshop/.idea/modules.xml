@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/eshop.iml" filepath="$PROJECT_DIR$/eshop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eshop.domain/eshop.domain.iml" filepath="$PROJECT_DIR$/eshop.domain/eshop.domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eshop.portal/eshop.portal.iml" filepath="$PROJECT_DIR$/eshop.portal/eshop.portal.iml" />
+    </modules>
+  </component>
+</project>
+
